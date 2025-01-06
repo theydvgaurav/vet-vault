@@ -47,7 +47,7 @@ export default function LoginPage() {
   };
 
   return (
-    <main className="min-h-screen  bg-creme flex">
+    <main className="min-h-screen flex">
       {/* Left side - Image */}
       <div className="hidden lg:block lg:w-1/2 relative">
         <div
@@ -62,8 +62,8 @@ export default function LoginPage() {
       </div>
 
       {/* Right side - Login Form */}
-      <div className="w-full lg:w-1/2 flex  bg-white items-center justify-center p-8 ">
-        <Card className="bg-[#A67C52] p-8 rounded-lg shadow-lg w-full max-w-sm">
+      <div className="w-full lg:w-1/2 flex  bg-slate-950/50 items-center justify-center p-8 ">
+        <Card className="p-8 rounded-lg shadow-lg w-full max-w-sm">
           <CardHeader className="space-y-3 text-center">
             <div className="space-y-2">
               <h1 className="text-white text-2xl font-bold mb-6 text-center">Vet Vault</h1>
