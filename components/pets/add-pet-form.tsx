@@ -50,7 +50,7 @@ export function AddPetForm() {
     };
 
     return (
-        <Card className="border-slate-800 bg-slate-950/50 backdrop-blur-sm p-6">
+        <Card className="border-blue-800 bg-blue-100 backdrop-blur-sm p-6 text-black">
             <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid gap-6 md:grid-cols-2">
                     <div className="space-y-2">
@@ -62,7 +62,7 @@ export function AddPetForm() {
                             onChange={handleChange}
                             placeholder="Enter pet's name"
                             required
-                            className="text-black focus-visible:ring-primary"
+                            className="text-black border-black focus-visible:ring-primary"
                         />
                     </div>
 
@@ -75,7 +75,7 @@ export function AddPetForm() {
                             onChange={handleChange}
                             placeholder="Enter owner's name"
                             required
-                            className="text-black focus-visible:ring-primary"
+                            className="text-black border-black focus-visible:ring-primary"
                         />
                     </div>
 
@@ -89,7 +89,7 @@ export function AddPetForm() {
                             onChange={handleChange}
                             placeholder="Enter 10 digit mobile number"
                             required
-                            className="text-black focus-visible:ring-primary"
+                            className="text-black border-black focus-visible:ring-primary"
                             pattern="[0-9]{10}"
                         />
                     </div>
@@ -111,7 +111,7 @@ export function AddPetForm() {
                             onChange={handleChange}
                             placeholder="Enter Breed"
                             required
-                            className=" text-black focus-visible:ring-primary"
+                            className="text-black border-black focus-visible:ring-primary"
                         />
                     </div>
                 </div>
@@ -133,12 +133,12 @@ export function AddPetForm() {
                     <Button
                         type="button"
                         variant="outline"
-                        className="w-full"
+                        className="w-full border-black"
                         onClick={() => (router.push('/pet-listing'))}
                     >
                         Cancel
                     </Button>
-                    <Button type="submit" variant="outline" className="w-full" disabled={isSubmitting}>
+                    <Button type="submit" variant="outline" className="w-full border-black" disabled={isSubmitting}>
                         {isSubmitting ? "Adding Pet..." : "Add Pet"}
                     </Button>
                 </div>

@@ -13,7 +13,7 @@ const eventTypeMap: { [key: string]: string } = {
 
 export function ScheduleCard({ schedule }: ScheduleCardProps) {
     return (
-        <Card className="border-slate-800 bg-slate-950/50 backdrop-blur-sm hover:bg-slate-900/50 transition-colors">
+        <Card className="border-blue-500 bg-blue-100 backdrop-blur-sm hover:bg-slate-900/50 transition-colors text-black">
             <CardHeader>
                 <div className="flex justify-between items-center">
                     <h3 className="text-lg font-semibold">{schedule.petName}</h3>

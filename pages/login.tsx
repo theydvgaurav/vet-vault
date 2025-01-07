@@ -62,16 +62,16 @@ export default function LoginPage() {
       </div>
 
       {/* Right side - Login Form */}
-      <div className="w-full lg:w-1/2 flex  bg-slate-950/50 items-center justify-center p-8 ">
+      <div className="w-full lg:w-1/2 flex  bg-white items-center justify-center p-8 ">
         <Card className="p-8 rounded-lg shadow-lg w-full max-w-sm">
           <CardHeader className="space-y-3 text-center">
             <div className="space-y-2">
-              <h1 className="text-white text-2xl font-bold mb-6 text-center">Vet Vault</h1>
+              <h1 className="text-black text-2xl font-bold mb-6 text-center">Vet Vault</h1>
             </div>
           </CardHeader>
           <form onSubmit={handleSubmit}>
             <CardContent className="space-y-4">
-              <div className="block text-white mb-2">
+              <div className="block text-black mb-2">
                 <Label htmlFor="mobile">Mobile Number</Label>
                 <Input
                   id="mobile"
@@ -83,7 +83,7 @@ export default function LoginPage() {
                   className="w-full p-3 rounded-md border text-black border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#A67C52]"
                 />
               </div>
-              <div className="block text-white mb-2">
+              <div className="block text-black mb-2">
                 <Label htmlFor="password">Password</Label>
                 <div className="relative">
                   <Input

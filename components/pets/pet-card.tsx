@@ -38,14 +38,13 @@ export function PetCard({ pet }: PetCardProps) {
   };
 
   return (
-    <Card className="border-slate-800 bg-slate-950/50 backdrop-blur-sm hover:bg-slate-900/50 transition-colors">
+    <Card className="border-blue-500 bg-blue-100 backdrop-blur-sm hover:bg-slate-900/50 transition-colors text-black">
       <CardHeader>
         <div className="flex justify-between items-center">
           <h3 className="text-lg font-semibold">{pet.petName}</h3>
-          {/* Edit button with pencil icon */}
           <button
             onClick={handleEditClick}
-            className="text-blue-500 hover:text-blue-700"
+            className="text-black hover:text-blue-700"
             aria-label="Edit Pet"
           >
             <FaEdit className="text-xl" />

@@ -17,7 +17,6 @@ export default function ScheduleList() {
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
   const handleDateChange = (date: Date | undefined) => {
     if (date) {
-      console.log(date)
       setSelectedDate(date);
       setSchedules([])
       setCurrentPage(1)
@@ -27,18 +26,15 @@ export default function ScheduleList() {
 
   useEffect(() => {
     async function fetchSchedules() {
-      console.log(selectedDate)
       try {
         if (selectedDate) {
           const response = await axios(`/api/schedule-list?date=${selectedDate.toLocaleDateString('en-CA')}&page=${currentPage}&limit=${itemsPerPage}`);
           const data = await response.data
-          console.log(data.data, selectedDate)
 
           if (data.data.length > 0) {
             setSchedules((prevSchedules) => [...prevSchedules, ...data.data]);
             setHasMore(data.totalPages > currentPage);
           }
-          console.log(schedules)
         }
       } catch (error) {
         console.error("Error fetching pets:", error);
@@ -88,9 +84,9 @@ export default function ScheduleList() {
         />
       </div>
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 mt-4">
-        {schedules.map((schedule) => (
+        {schedules.length > 0 ? schedules.map((schedule) => (
           <ScheduleCard key={schedule.petId} schedule={schedule} />
-        ))}
+        )) : (<div className="text-center mt-4 text-black">No Schedules for today</div>)}
       </div>
 
       {loading && currentPage > 1 && (

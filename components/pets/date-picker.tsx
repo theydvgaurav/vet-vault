@@ -31,15 +31,15 @@ export function DatePicker({ date, onSelect }: DatePickerProps) {
         <Button
           variant="outline"
           className={cn(
-            "w-full justify-start text-left font-medium border rounded-lg shadow-sm transition-all duration-300 ease-in-out hover:border-green-500 focus:border-green-500",
+            "w-full justify-start text-left font-medium border rounded-lg shadow-sm transition-all duration-300 ease-in-out border-black",
             !date && "text-muted-foreground"
           )}
         >
-          <CalendarIcon className="mr-2 h-4 w-4 text-green-500" />
+          <CalendarIcon className="mr-2 h-4 w-4 text-black" />
           {date ? (
-            <span className="text-lg font-semibold">{format(date, "PPP")}</span>
+            <span className="text-md text-black font-semibold">{format(date, "PPP")}</span>
           ) : (
-            <span className="text-sm text-muted-foreground">Pick a date</span>
+            <span className="text-sm text-black text-muted-foreground">Pick a date</span>
           )}
         </Button>
       </PopoverTrigger>
@@ -49,7 +49,7 @@ export function DatePicker({ date, onSelect }: DatePickerProps) {
         style={{
           position: "absolute",
           top: "calc(100% + 10px)", // Position above the button
-          background: "rgba(15, 23, 42, 1)"
+          background: "rgb(120, 129, 140)"
         }} 
       >
         <Calendar
@@ -57,7 +57,7 @@ export function DatePicker({ date, onSelect }: DatePickerProps) {
           selected={date}
           onSelect={handleSelect} // Use handleSelect to close popover
           initialFocus
-          className="rounded-lg shadow-md"
+          className="rounded-lg shadow-md text-black"
         />
       </PopoverContent>
     </Popover>

@@ -36,8 +36,8 @@ export default function Login({
   }, [isAuthenticated, router]);
 
   return (
-    <main className="flex min-h-screen items-center justify-center p-4 bg-[#D2D3D3]">
-      Hello MF!
+    <main className="flex min-h-screen items-center justify-center p-4 bg-white">
+      Loading...
     </main>
   );
 }

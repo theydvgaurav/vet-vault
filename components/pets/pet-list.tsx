@@ -18,7 +18,6 @@ export function PetList() {
       try {
         const response = await fetch(`/api/pet-list?page=${currentPage}&limit=${itemsPerPage}`);
         const data = await response.json();
-        console.log(data)
         if (data.data.length > 0) {
           setPets((prevPets) => [...prevPets, ...data.data]);
           setHasMore(data.totalPages > currentPage);
