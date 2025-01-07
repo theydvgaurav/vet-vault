@@ -53,7 +53,7 @@ function generatePetEvents(petId: string | string[] | undefined, dob: string) {
         if (event.repeatYearly) {
             const startDate = new Date(dobDate);
             startDate.setDate(startDate.getDate() + event.startAgeInDays);
-            for (let i = 0; i < 15; i++) {
+            for (let i = 1; i < 15; i++) {
                 const yearlyDate = new Date(startDate);
                 yearlyDate.setFullYear(yearlyDate.getFullYear() + i);
                 events.push({
@@ -81,7 +81,7 @@ function generatePetEvents(petId: string | string[] | undefined, dob: string) {
         if (event.repeatYearly) {
             const startDate = new Date(dobDate);
             startDate.setDate(startDate.getDate() + event.startAgeInDays);
-            for (let i = 0; i < 15; i++) {
+            for (let i = 1; i < 15; i++) {
                 const yearlyDate = new Date(startDate);
                 yearlyDate.setFullYear(yearlyDate.getFullYear() + i);
                 events.push({
