@@ -27,7 +27,8 @@ function generatePetEvents(petId: string | string[] | undefined, dob: string) {
 
     // Deworming events (monthly)
     let currentDate = new Date(dobDate);
-    for (let i = 1; i < 15 * 12; i++) { // 15 years * 12 months
+    currentDate.setMonth(currentDate.getMonth() + 1);
+    for (let i = 0; i < 15 * 12; i++) { // 15 years * 12 months
         events.push({
             petId,
             eventType: 'deworming',
@@ -52,7 +53,7 @@ function generatePetEvents(petId: string | string[] | undefined, dob: string) {
         if (event.repeatYearly) {
             const startDate = new Date(dobDate);
             startDate.setDate(startDate.getDate() + event.startAgeInDays);
-            for (let i = 1; i < 15; i++) {
+            for (let i = 0; i < 15; i++) {
                 const yearlyDate = new Date(startDate);
                 yearlyDate.setFullYear(yearlyDate.getFullYear() + i);
                 events.push({
@@ -80,7 +81,7 @@ function generatePetEvents(petId: string | string[] | undefined, dob: string) {
         if (event.repeatYearly) {
             const startDate = new Date(dobDate);
             startDate.setDate(startDate.getDate() + event.startAgeInDays);
-            for (let i = 1; i < 15; i++) {
+            for (let i = 0; i < 15; i++) {
                 const yearlyDate = new Date(startDate);
                 yearlyDate.setFullYear(yearlyDate.getFullYear() + i);
                 events.push({
